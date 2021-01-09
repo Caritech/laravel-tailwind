@@ -1,8 +1,13 @@
+@extends('layouts.front',['fixed_header'=>true, 'footer'=>false]) 
+
+@section('content')
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+              <div class=" flex justify-center">
+                        <img class="h-48 z-50" src="/images/hero.png" />
+                    </div>
             </a>
         </x-slot>
 
@@ -54,3 +59,4 @@
         </form>
     </x-auth-card>
 </x-guest-layout>
+@endsection
